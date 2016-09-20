@@ -1,36 +1,55 @@
 <!doctype html>
+<!--This page is for user to login in -->
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="bookRecycle.js"></script>
 		<title>BookRecycle: Login</title>
 	</head>
 	<body>
+		
 		<link href="styles/main.css" rel="stylesheet" />
-
-		<ul id="navbar">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="createPosting.html">Create Posting</a></li>
-			<li><a href="textbookPostings.html">Find Textbooks</a></li>
-			<li><a href="loginPage.html">Login</a></li>
-			<li><a href="createAccount.html">Create Account</a></li>
-		</ul>
+		
+		<div class="navBar">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="createPosting.html">Create Posting</a></li>
+				<li><a href="textbookPostings.html">Find Textbooks</a></li>
+				<li><div id="selected">Login</div></li>
+				<li><a href="createAccount.html">Create Account</a></li>
+			</ul>
+		</div>
 		<br/>
 		<br/>
-		<p><strong><font size=5>Login</font></strong></p>
-		<br/>
-		<p>Username: <input type="text" placeholder="enter username" pattern="[A-Za-z]+"/></p>
-		<p>Password: <input type="password"/></p>
-		<br/>
-		<p>Don't have an account? <a href="createAccount.html">Create one!</a></p>
-
-		<button>Login</button>
+		<div class="bodyContainer">
+			<p><strong><font size=5>Login</font></strong></p>
+			<br/>
 			
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<p>Book Recycle is a textbook transaction platform that is being developed by <a href="mailto:mbauzon@gmu.edu">Michael Josh Bauzon</a> and <a href="mailto:xfang5@gmu.edu">Xiaowen Fang</a> over the course of SWE 432.</p>
-			
+			<form>
+				<div>
+					<label for="username">Username:</label>
+					<input type="text" id="username" placeholder="enter username" pattern="^[A-Za-z0-9]+$"/></p>
+				
+					<label for="pass">Password:</label>
+					<input type="password" id="pass"/>
+				</div>
+				<div>
+					<p>Don't have an account? <a href="createAccount.html">Create one!</a></p>
+				</div>
+				
+				<br/>			
+		</form>		
+		<div>
+			<button id="login">Login</button>
+		</div>
+		
+		</div>
+		
+		<br/><br/>
+		<div id="welcomeMsgInLogin"></div>
+		<br/><br/><br/><br/>
+		<div class="bottomDescr">
+                <p> <strong>Book Recycle &copy;</strong> is a textbook transaction platform that is being developed by <a href="mailto:mbauzon@gmu.edu">Michael Josh Bauzon</a> and <a href="mailto:xfang5@gmu.edu">Xiaowen Fang</a> over the course of SWE 432. </p>
+        </div>
 	</body>
 </html>

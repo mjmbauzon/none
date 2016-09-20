@@ -1,47 +1,81 @@
 <!doctype html>
+<!--This page is for creating a new account -->
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="bookRecycle.js"></script>
 		<title>BookRecycle: Create Account</title>
 	</head>
 	<body>
 		<link href="styles/main.css" rel="stylesheet" />
 
-		<ul id="navbar">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="createPosting.html">Create Posting</a></li>
-			<li><a href="textbookPostings.html">Find Textbooks</a></li>
-			<li><a href="loginPage.html">Login</a></li>
-			<li><a href="createAccount.html">Create Account</a></li>
-		</ul>
+		<div class="navBar">
+			<ul id="navbar">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="createPosting.html">Create Posting</a></li>
+				<li><a href="textbookPostings.html">Find Textbooks</a></li>
+				<li><a href="loginPage.html">Login</a></li>
+				<li><div id="selected">Create Account</div></li>
+			</ul>
+		</div>
 		<br/>
-		<br/><p><strong><font size=5>Create Account</font></strong></p>
-		<br/>
-		<p>First Name: <input type="text" pattern="[A-Za-z]+"/></p>
-		<p>Last Name: <input type="text" pattern="[A-Za-z]+"/></p>
-		<p>School:
-			<select>
-				<option>-select-</option>
-				<option>George Mason University</option>
-				<option>James Madison University</option>
-				<option>University of Virginia</option>
-			</select>
-		</p>
-		<p>E-mail: <input type="text" placeholder="enter valid e-mail address" pattern="[A-Za-z]+@[A-Za-z]+\.(com|net|co)"/></p>
-		<p>Phone Number: <input type="text" style="width:200px;" placeholder="###-###-#### or (###)###-#####" pattern="([\d]{10})|(\(\d{3}\)\d{7})|(\(\d{3}\)\d{3}\-\d{4})|(\d{3}\-\d{3}\-\d{4})"/></p>
-		<br/>
-		<p>Username: <input type="text" placeholder="enter username" pattern="[A-Za-z]+"/></p>
-		<p>Password: <input type="password"/></p>
-
-
-		<button>Create Account</button>
+		<div class="bodyContainer">
+			<br/><p><strong><font size=5>Create Account</font></strong></p>
+			<br/>
+			<form>
+				<div>
+					<label id="firstnameLbl">First Name:</label>
+					 <input type="text" id="firstname" pattern="[A-Za-z]+"/>
+				</div>
+				<div>
+					<label id="lastnameLbl">Last Name:</label>
+					 <input type="text" id="lastname" pattern="[A-Za-z]+"/>
+				</div>
+				<div>
+					<label id="schoolLbl">School:</label>
+					<select id="school">
+						<option disabled selected style="color:red">-select-</option>
+						<option value="GMU">George Mason University</option>
+						<option value="JMU">James Madison University</option>
+						<option value="UVA">University of Virginia</option>
+					</select>
+				</div>
+				<div>
+					<label id="emailLbl">E-mail:</label>
+					 <input type="email" id="email" placeholder="enter valid e-mail address" pattern="[A-Za-z]+@[A-Za-z]+\.(com|net|co|edu|gov)"/>
+				</div>
+				<div>
+					<label id="phoneLbl">Phone Number:</label>
+					 <input type="text" id="phone" style="width:300px;" placeholder="###-###-#### or (###)###-#####" pattern="([\d]{10})|(\(\d{3}\)\d{7})|(\(\d{3}\)\d{3}\-\d{4})|(\d{3}\-\d{3}\-\d{4})"/></p>
+				</div>
+				
+				<br/>
+				<div>
+					<label id="usernameLbl">Username:</label>
+					 <input type="text" id="username" placeholder="enter username" pattern="[A-Za-z]+"/></p>
+				</div>
+				<div>
+					<label id="passLbl">Password:</label>
+					<input type="password" id="pass"/></p>
+				</div>
+				<div>
+					<label id="passreenterLbl">Re-enter Password:</label>
+					<input type="password" id="passreenter"/></p>
+				</div>
+				
+			</form>
+			<div class="button">
+					<button id="createAccount">Create Account</button>
+			</div>
+			
+			
+		</div>
 		
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<br/>
-		<p>Book Recycle is a textbook transaction platform that is being developed by <a href="mailto:mbauzon@gmu.edu">Michael Josh Bauzon</a> and <a href="mailto:xfang5@gmu.edu">Xiaowen Fang</a> over the course of SWE 432.</p>
-
+		<br/><br/>
+		<div id="welcomeMsg"></div>
+		<br/><br/><br/><br/>
+		<div class="bottomDescr">
+                <p> <strong>Book Recycle &copy;</strong> is a textbook transaction platform that is being developed by <a href="mailto:mbauzon@gmu.edu">Michael Josh Bauzon</a> and <a href="mailto:xfang5@gmu.edu">Xiaowen Fang</a> over the course of SWE 432. </p>
+        </div>
 	</body>
 </html>

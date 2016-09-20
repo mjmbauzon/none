@@ -1,26 +1,175 @@
-ul#navbar {
-  list-style:none;
-  margin:20px;
-  padding:0;
-  width:775px
+body{
+	background: #e6ffe6;
 }
 
-ul#navbar li {
-  display:inline
+.navBar ul{
+	list-style:none;
+	margin:20px; 
+	padding:0;
+	width:100%;
 }
 
-ul#navbar li a {
-  text-decoration:none;
-  padding:5px 0;
-  width:150px;
-  background:#003399;
-  color:#eee;
-  float:left;
-  text-align:center;
-  border-left:1px solid #fff;
+.navBar li {
+	display:inline;
 }
 
-ul#navbar li a:hover {
-  background:#99bbff;
-  color:#000
+.navBar li a {
+	text-decoration:none;
+	padding:5px 0;
+	width:150px;
+	height: 25px;
+	background:#003399;
+	color:#eee;
+	float:left;
+	text-align:center;
+	border-left:1px solid #fff;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+.navBar li a:hover {
+	background:#337aff;
+	color:#000;
+}
+
+.bodyContainer{
+	margin:20px;
+	width:100%;
+}
+
+form {
+    /* Just to center the form on the page */
+    /*margin: 0 auto;*/
+	width:100%;
+    /* To see the outline of the form */
+    padding: 1em;
+    /*border: 1px solid #CCC;*/
+    border-radius: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+head {
+	position: absolute;
+	background-color: LightGray;
+	left: 350px;
+	width: 250px;
+}
+img.large {
+	width: 200px;
+	height: 200px;
+}
+
+img:hover{
+	transform: rotate(359deg);
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-ms-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+}
+
+.transform1 {
+	transform: rotate(0.3turn);
+}
+
+.transparent {
+	opacity: .50;
+	z-index: 10;
+}
+input, textarea, select {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em sans-serif;
+
+    /* To give the same size to all text field */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    /* To give a little highlight on active elements */
+    border-color: #000;
+}
+
+textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* To give enough room to type some text */
+    height: 5em;
+
+    /* To allow users to resize any textarea vertically
+       It does not work on all browsers */
+    resize: vertical;
+}
+
+.button {
+    /* To position the buttons to the same position of the text fields */
+    padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: .5em;
+	width: 200px;
+	height: 30px;
+}
+
+table, th, td {
+    border: 2px solid black;
+
+}
+
+div#selected{
+	text-decoration:none;
+	padding:5px 0;
+	width:150px;
+	height: 25px;
+	background:#99bbff;
+	color:#00091a;
+	float:left;
+	text-align:center;
+	border-left:1px solid #fff;
+}
+
+input[pattern]:invalid{
+	color:red;
+}
+div#invalidSelection{
+	color:red;
+}
+
+img{
+    position: absolute;
+    left: 50px;
+    top: 120px;
+    z-index: -1;
+}
+
+.bottomDescr{
+	position: relative;
+}
+
+.bottomDescr p{
+	position: fixed; 
+	bottom: 0; 
+	width:100%; 
+	text-align: left;
 }
