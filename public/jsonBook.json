@@ -1,0 +1,407 @@
+{
+  "school" : {
+    "GMU" : {
+      "CS100" : {
+        "-KTGqd6rF7bNfPSe5xc5" : {
+          "author" : "cc",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "20",
+          "sellerID" : "cmu",
+          "title" : "mm"
+        }
+      },
+      "CS101" : {
+        "-KTGqVu0gDhoR452CYZG" : {
+          "author" : "chenhao",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "12",
+          "sellerID" : "cmu",
+          "title" : "aa"
+        },
+        "-KTbjZBQpufDrHouSlgS" : {
+          "author" : "mu",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "12",
+          "title" : "good"
+        }
+      },
+      "CS105" : {
+        "-KSddGgeFJ4aXh4fzVta" : {
+          "author" : "not sure",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "35",
+          "sellerID" : "cj",
+          "title" : "Ethics in the information age"
+        },
+        "-KT1BLtFAyE80KJ4lnKb" : {
+          "author" : "unknown",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "30",
+          "sellerID" : "xfang5",
+          "title" : "Ethics in info age"
+        }
+      },
+      "CS211" : {
+        "-KScOKe0OpE1EXEqmtbr" : {
+          "author" : "Thomas LaToza",
+          "isbn" : "none",
+          "note" : "semi-new\"",
+          "price" : "45",
+          "sellerID" : "mbauzon",
+          "title" : "GMU texbook for CS211"
+        },
+        "-KScf5jh5nR3il-qDLcK" : {
+          "author" : "Eric Johnson",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "80",
+          "sellerID" : "trylang",
+          "title" : "CS211 textbook"
+        },
+        "-KSdYScJBfhhe7Kxk965" : {
+          "author" : "Unknown",
+          "isbn" : "4444444444444",
+          "note" : "Required Textbook",
+          "price" : "60",
+          "sellerID" : "bj",
+          "title" : "Java Programming"
+        }
+      },
+      "CS310" : {
+        "-KSdcMottJsM2p104Y59" : {
+          "author" : "unknow",
+          "isbn" : "none",
+          "note" : "Required",
+          "price" : "40",
+          "sellerID" : "cj",
+          "title" : "Data Structures"
+        },
+        "-KSdf5vIVwWFMgJz7HMU" : {
+          "author" : "Unknown",
+          "isbn" : "none",
+          "note" : "Acceptable",
+          "price" : "30",
+          "sellerID" : "ew",
+          "title" : "Data Structures "
+        }
+      },
+      "CS321" : {
+        "-KSdbQeGAq0NSN9_emcy" : {
+          "author" : "Sommervile",
+          "isbn" : "none",
+          "note" : "Easy to find e-book online",
+          "price" : "35",
+          "sellerID" : "bj",
+          "title" : "Software Engneering"
+        }
+      },
+      "CS330" : {
+        "-KSdbFMxsdZQYxZkFSCg" : {
+          "author" : "Dana Richards",
+          "isbn" : "none",
+          "note" : "Written by Prof Dana",
+          "price" : "40",
+          "sellerID" : "bj",
+          "title" : "Formal Language and Logistics"
+        }
+      },
+      "CS332" : {
+        "-KScM9Rp_vI5YMs1z5ZH" : {
+          "author" : "Liskov",
+          "isbn" : "none",
+          "note" : "new sealed",
+          "price" : "30",
+          "seller" : {
+            "sellerEmail" : "mbauzon@gmu.edu",
+            "sellerFirst" : "Josh",
+            "sellerLast" : "Bauzon",
+            "sellerPhone" : "1234567891"
+          },
+          "sellerID" : "mbauzon",
+          "title" : "PROGRAM DEVELOPMENT IN JAVA"
+        },
+        "-KScMGOcTObmX6tDRO8j" : {
+          "author" : "Bloch",
+          "isbn" : "none",
+          "note" : "used but good condition",
+          "price" : "40",
+          "seller" : {
+            "sellerFirst" : "Josh",
+            "sellerLast" : "Bauzon"
+          },
+          "sellerID" : "mbauzon",
+          "title" : "EFFECTIVE JAVA:PROGRAMMING LANG.GDE."
+        }
+      },
+      "CS367" : {
+        "-KSdcX0i34CD4QZ9kgBn" : {
+          "author" : "Boran",
+          "isbn" : "none",
+          "note" : "Read it and you'll pass",
+          "price" : "60",
+          "sellerID" : "cj",
+          "title" : "CSAPP (3e)"
+        }
+      },
+      "CS450" : {
+        "-KSdbavgJyUB5sDxAFEB" : {
+          "author" : "Ran",
+          "isbn" : "none",
+          "note" : "Required textbook",
+          "price" : "45",
+          "sellerID" : "bj",
+          "title" : "Database System Management"
+        },
+        "-KSde18ytZ5Sj8hmCTnX" : {
+          "author" : "Rankjam",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "60",
+          "sellerID" : "dl",
+          "title" : "Database Management System"
+        }
+      },
+      "CS451" : {
+        "-KSdceky0v3UYAoxZoRb" : {
+          "author" : "Unknow",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "50",
+          "sellerID" : "cj",
+          "title" : "Introduction to Computer Graphics "
+        }
+      },
+      "CS480" : {
+        "-KSdblOn7H_ABII8FRak" : {
+          "author" : "Not sure",
+          "isbn" : "none",
+          "note" : "Not Required but helpful",
+          "price" : "50",
+          "sellerID" : "bj",
+          "title" : "Artificial Intelegence"
+        }
+      },
+      "CS482" : {
+        "-KSdeCwjnDse1OoAe36Z" : {
+          "author" : "not sure",
+          "isbn" : "none",
+          "note" : "Also textbook for CS480",
+          "price" : "60",
+          "sellerID" : "dl",
+          "title" : "Artificial Intelligence "
+        }
+      },
+      "CS483" : {
+        "-KSdenGN97CdM5-wur0a" : {
+          "author" : "not sure",
+          "isbn" : "none",
+          "note" : "Good textbook",
+          "price" : "50",
+          "sellerID" : "dl",
+          "title" : "Introduction to Algorithms"
+        }
+      },
+      "CS484" : {
+        "-KSdd9s9BnfJxhQlX9K8" : {
+          "author" : "Jiawei Han",
+          "isbn" : "none",
+          "note" : "Good condition",
+          "price" : "50",
+          "sellerID" : "cj",
+          "title" : "Data Mining"
+        }
+      },
+      "SWE432" : {
+        "-KSd77wEvzumjlmyaXN7" : {
+          "author" : "Hacker One",
+          "isbn" : "1111111111222",
+          "note" : "Helpful for JS programming in this course",
+          "price" : "60",
+          "sellerID" : "ew",
+          "title" : "JS the good part"
+        },
+        "-KSd7O8LLlRoaga4xvER" : {
+          "author" : "Tom",
+          "isbn" : "2222222345555",
+          "note" : "Great condition",
+          "price" : "40",
+          "sellerID" : "ew",
+          "title" : "JQuery makes things easy"
+        },
+        "-KSd7ZBy-zvZhVtDeT3m" : {
+          "author" : "Jerry",
+          "isbn" : "5555555",
+          "note" : "Actually you can find this online",
+          "price" : "20",
+          "sellerID" : "ew",
+          "title" : "Firebase is a databse service"
+        },
+        "-KSdYmSX4reEDI8aG6Ec" : {
+          "author" : "Not Sure",
+          "isbn" : "66666666",
+          "note" : "none",
+          "price" : "55",
+          "sellerID" : "bj",
+          "title" : "Introduction to HTML and CSS"
+        },
+        "-KSdcqBflzCOMTSuWfqC" : {
+          "author" : "not sure",
+          "isbn" : "77777777",
+          "note" : "none",
+          "price" : "20",
+          "sellerID" : "cj",
+          "title" : "JS the good part"
+        },
+        "-KSddbZGcF7AGpnn2UdA" : {
+          "author" : "Paul Ammann",
+          "isbn" : "5558882222",
+          "note" : "new",
+          "price" : "50",
+          "sellerID" : "mbauzon",
+          "title" : "Software Web Implementation"
+        },
+        "-KSdduz-0jA0V81rQC6K" : {
+          "author" : "not sure",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "36",
+          "sellerID" : "dl",
+          "title" : "DOM Manipulation "
+        },
+        "-KSdeO2LyPpSJNhZ84N0" : {
+          "author" : "unknown",
+          "isbn" : "66775555",
+          "note" : "none",
+          "price" : "30",
+          "sellerID" : "dl",
+          "title" : "Javascript the good part"
+        }
+      },
+      "SWE437" : {
+        "-KSddWOkdQAnBRqHONsd" : {
+          "author" : "not sure",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "50",
+          "sellerID" : "cj",
+          "title" : "Software Maintenance "
+        }
+      }
+    },
+    "JMU" : {
+      "CS112" : {
+        "-KSdZ19sKYnCtTFN5bEz" : {
+          "author" : "Snake",
+          "isbn" : "none",
+          "note" : "Tutorial",
+          "price" : "39",
+          "sellerID" : "bj",
+          "title" : "Learn Python the Hard Way"
+        }
+      },
+      "CS211" : {
+        "-KScNzwBvDOf5DwCvkcy" : {
+          "author" : "Thomas LaToza",
+          "isbn" : "none",
+          "note" : "brand new",
+          "price" : "50",
+          "sellerID" : "mbauzon",
+          "title" : "JMU texbook for CS211"
+        }
+      },
+      "CS222" : {
+        "-KSdb3EBvTG5SZX_ipdz" : {
+          "author" : "Unknow",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "35",
+          "sellerID" : "bj",
+          "title" : "C programming"
+        }
+      },
+      "CS262" : {
+        "-KSd8yfBH1klXgzwULsY" : {
+          "author" : "Lanbert",
+          "isbn" : "none",
+          "note" : "You don't need this actually",
+          "price" : "20",
+          "title" : "C programming"
+        }
+      },
+      "SWE432" : {
+        "-KSd8Jy6tcOJZODxvavr" : {
+          "author" : "Frank",
+          "isbn" : "9999999999999",
+          "note" : "Sometimes go to JMU",
+          "price" : "45",
+          "sellerID" : "ew",
+          "title" : "AJAX"
+        }
+      }
+    },
+    "UVA" : {
+      "CS1010" : {
+        "-KScJFPbN1wTBB6y0eyV" : {
+          "author" : "uvaprof1010",
+          "isbn" : "101001010",
+          "note" : "none",
+          "price" : "1010",
+          "sellerID" : "mbauzon",
+          "title" : "UVA 1010"
+        },
+        "-KScLYoiKzZtoNuVEfex" : {
+          "author" : "no body ",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "50",
+          "sellerID" : "mbauzon",
+          "title" : "AnotherPostingFor1010SameSeller"
+        },
+        "-KSd84vGZlV3obRhq9oX" : {
+          "author" : "Snake",
+          "isbn" : "none",
+          "note" : "I live near UVA. ",
+          "price" : "30",
+          "sellerID" : "ew",
+          "title" : "Introduction to Python"
+        }
+      },
+      "CS4457" : {
+        "-KSdd25e2blFvPExuKRf" : {
+          "author" : "unknown",
+          "isbn" : "none",
+          "note" : "none",
+          "price" : "50",
+          "sellerID" : "cj",
+          "title" : "Compiler"
+        }
+      },
+      "CS4810" : {
+        "-KSdZBtrzRLm8EowQi0G" : {
+          "author" : "Not Sure",
+          "isbn" : "3333333333333",
+          "note" : "Classic textbook for years",
+          "price" : "50",
+          "sellerID" : "bj",
+          "title" : "Introduction to Algorithms"
+        }
+      },
+      "CS4998" : {
+        "-KSd9l9xMbcXE63FRxS9" : {
+          "author" : "Ann",
+          "isbn" : "none",
+          "note" : "You really need this. This course is super hard!",
+          "price" : "50",
+          "title" : "Computer Compiler"
+        }
+      }
+    }
+  }
+  
+  
+}

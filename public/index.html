@@ -1,0 +1,104 @@
+<!doctype html>
+<!--This is homepage -->
+<html>
+	<head>
+		<title>Book Recycle</title>
+		<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="bookRecycle.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<!--for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<script>
+		function welcomeIndex(ttl) {
+			var titleMessage = ttl.getAttribute("data-message");
+			alert("Welcome to " + titleMessage + "!");
+		}
+		</script>
+	</head>
+	<body>
+		<link href="styles/main.css" rel="stylesheet" />
+		<header>
+			<h1>BookRecycle</h1>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					  </button>
+					  <a class="navbar-brand" href="#">Home</a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="navBar">
+						<ul class="nav navbar-nav">
+							<li><a href="createPosting.html">Create Posting</a></li>
+							<li><a href="textbookPostings.html">Find Textbooks</a></li>
+							<!-- <li><a href="searchUser.html">Search User</a></li>	-->			
+							<li><a href="visualization.html" target="_blank">Visualization</a></li>
+							<li><a href="myPostings.html">My Postings</a></li>					
+							
+							<!--<li id="logoutLink" style="display: none"><a href=#>Logout</a></li>-->
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a><div id="navBarUser"></div></a></li>
+							<li id="createAcctLink"><a href="createAccount.html"><span class="glyphicon glyphicon-user"></span> Create Account</a></li>
+							<li id="loginLink"><a href="loginPage.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+							<li id="logoutLink" style="display: none"><a href=#><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		<!--<div class="navBar">
+			<ul>
+				<li><div id="selected">Home</div></li>
+				<li><a href="createPosting.html">Create Posting</a></li>
+				<li><a href="textbookPostings.html">Find Textbooks</a></li>
+				<li><a href="loginPage.html">Login</a></li>
+				<li><a href="createAccount.html">Create Account</a></li>
+				<li><a href="searchUser.html">Search User</a></li>		
+				<li><a href="visualization.html">Visualization</a></li>
+				<li><a href="myPostings.html">My Postings</a></li>					
+				
+				<li><div id="navBarUser"></div></li>
+				<li id="logoutLink" style="display: none"><a>Logout</a></li>
+			</ul>
+		</div>-->
+		
+		<div class="bodyContainer">
+			<p>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<div id="welcomeIndex" style="display: none"></div>
+				
+				<!-- Image below is our own produced logo -->
+				<img id="ourLogo" src= "BookRecycleLogo.png" height="220" width="240">
+			</p>
+			
+			<div id="profImage"></div>
+			<br/><br/><br/>
+			<form id="uploadPicForm" enctype="multipart/form-data">Upload/Change Profile Picture:<br/><input type="text" placeholder="Enter your username for verification" id="userPrompt" name="userIn" /><input type="file" id="newFile" name="img" accept="image/*"/><input type="submit" value="Upload" /></form>
+			<br/><br/>
+			<div id="testFirebase"></div>
+			
+		</div>
+		
+		<div class="bottomDescr">
+            <p><strong>Book Recycle &copy;</strong> is a textbook transaction platform that is being developed by <a href="mailto:mbauzon@gmu.edu">Michael Josh Bauzon</a> and <a href="mailto:xfang5@gmu.edu">Xiaowen Fang</a> over the course of SWE 432. </p>
+        </div>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</body>
+</html>	

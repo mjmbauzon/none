@@ -1,0 +1,159 @@
+<!doctype html>
+<!--This page is for searching the textbook you want -->
+<html>
+	<head>
+		<!--firebase -->
+		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+		<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!--React. We need some add-ons in react component -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-with-addons.js"></script>
+		<script src="https://fb.me/react-dom-15.0.0.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+		<script type="text/babel" src="test_bookRecycle.js"></script>
+		<title>BookRecycle: Textbook Postings</title>
+		<!--Jasmine 
+    		<script type="text/javascript" src="jasmine-2.5.2/jasmine.js"></script>
+    		<script type="text/javascript" src="jasmine-2.5.2/jasmine-html.js"></script>
+    		<script type="text/javascript" src="jasmine-2.5.2/boot.js"></script>
+    		-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<!--for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="jasmine-2.5.2/jasmine.css">
+			
+	</head>
+	<body>
+		<link href="styles/main.css" rel="stylesheet" />
+
+		<header>
+			<h1>BookRecycle</h1>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navBar" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">Home</a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="navBar">
+						<ul class="nav navbar-nav">
+							<li><a href="createPosting.html">Create Posting</a></li>
+							<li class="active"><a>Find Textbooks</a></li>
+							<!-- <li><a href="searchUser.html">Search User</a></li>	-->	
+							<li><a href="visualization.html" target="_blank">Visualization</a></li>
+							<li><a href="myPostings.html">My Postings</a></li>					
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<!--<li><a><div id="navBarUser"></div></a></li>
+							<li id="createAcctLink"><a href="createAccount.html"><span class="glyphicon glyphicon-user"></span> Create Account</a></li>
+							<li id="loginLink"><a href="loginPage.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+							<li id="logoutLink" style="display: none"><a href=#><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>-->
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		<!--
+		<div class="navBar">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="createPosting.html">Create Posting</a></li>
+				<li><div id="selected">Find Textbooks</div></li>
+				<li><a href="loginPage.html">Login</a></li>
+				<li><a href="createAccount.html">Create Account</a></li>
+				<li><a href="searchUser.html">Search User</a></li>				
+				<li><div id="navBarUser"></div></li>
+				<li id="logoutLink" style="display: none"><a>Logout</a></li>
+			</ul>
+		</div>-->
+		<div class="bodyContainer">
+			<p><strong><font size=5>Textbook Postings</font></strong></p>
+			<br/>
+			<p>Check a <a href="visualization.html" target="_blank">visualization</a> of available textbooks by School and Course!</p>
+			<form>
+				<div>
+					<label>Your School:</label>
+					<select id="schoolOptions">
+						<option disabled selected style="color:red">-select-</option>
+						<option value="GMU">George Mason University</option>
+						<option value="JMU">James Madison University</option>
+						<option value="UVA">University of Virginia</option>
+					</select>
+				</div>
+				<div>
+					<label>Your Course:</label>
+					<select id="courseOptions">
+						<option disabled selected style="color:red">-select school first-</option>
+					</select>
+				</div>
+			</form>
+			<div>
+				<button id="searchPostings">Search for Postings</button>
+			</div>
+			<br/><br/>
+			
+			<div id="spinner" style="position: absolute; height: 100px; width: 100px; left: 20%; margin-left: -50px; margin-top: -50px; display: none">
+				<img src="spinner.gif" width="90" />
+			</div>
+			<br/>
+			<div id='searchResult'>
+				<table id='searchResultTable'>
+					<!--<tr>
+						<th>Textbook Title</th>
+						<th>Author</th>
+						<th>ISBN</th>
+						<th>Seller Username</th>
+						<th>Price ($)</th>
+						<th>Seller's Notes</th>
+						<th>Course</th>
+					</tr>-->
+				</table>
+			</div>
+			<div id="noSellerFound" style="display: none"><b>Sorry, no textbook posting found.</b></div>
+			<div id='userInfo'></div>
+		
+			<br/>
+			<div id="promptToSearchUser" style="display: none"><span style="background-color: #FFFF00">Interested in a book? <b>See seller's contact information by <u>clicking on the row of the desired posting!</u></b></span></div>
+		</div>
+		<br/><br/>
+		<!--<div id="debugthis"></div>-->
+		<div class="bottomDescr">
+                <p> <strong>Book Recycle &copy;</strong> is a textbook transaction platform that is being developed by <a href="mailto:mbauzon@gmu.edu">Michael Josh Bauzon</a> and <a href="mailto:xfang5@gmu.edu">Xiaowen Fang</a> over the course of SWE 432. </p>
+        </div>
+	
+	<script type="text/babel">
+	describe('BookTabel', function(){
+		var TestUtils = React.addons.TestUtils;
+		var bookTableComponent, element;
+		var arr;
+		beforeEach(function(done){
+			firebase.database().ref("schools/" + $('#schoolOptions').val() + $('#courseOptions').val()).once('value').then(function(snapshot){
+				arr = $.map(snapshot.val(), function(el){return el});
+			element = React.createElement(BookTable);
+			done();
+			});	
+		});
+		it("will generate a bookTable", function(){
+			expect();
+		});	
+	});
+
+	</script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</body>
+</html>

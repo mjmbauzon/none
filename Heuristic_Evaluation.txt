@@ -1,0 +1,39 @@
+H2: Match between system and the real world
+  In textbookPosting.html and createPosting.html, we don't use user's language for labels of user input.
+  (screenshots will be added later)
+
+
+H4: Consistency and Standards.
+  Navigate bar doesn't consistent on different page.
+  (screenshots will be added later)
+  
+H4: Consistency and Standards.
+  At textbookPosting.html, the outcome format doesn't consistant. 
+  (screenshots will be added later)
+  
+  
+H5: Error prevention
+  At index.html, user should only upload image file but actually user can upload any kind of files.
+  (screenshots will be added later)
+
+
+H6: Recognition rather than recall
+  User needs to recall username rather than recognize existing username when searching user's information.
+  (screenshots will be added later)
+
+
+
+
+H7: Flexibility and Efficiency of Use
+  User should be allowed to sort outcome by attributes value they are interested (like Price). 
+  (screenshots will be added later)
+
+  
+  
+  
+  
+  
+  
+  
+  
+ 

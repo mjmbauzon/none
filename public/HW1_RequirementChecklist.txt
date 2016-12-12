@@ -1,0 +1,18 @@
+/* This file lists requuirements we still need to satisfy in HW1. Please don't delete the requirements even if you implement it. Just add an underscore or strike out line on it or use some other way to mark it.*/
+
+  
+Use of HTML elements
+	<table>                         (<form>, <link>, <input> are implemented already)
+	At least 3 different semantic layout elements (Implemented already)
+
+Use of CSS features
+	At least 4 selector types (implemented already)
+	At least 3 pseudo classes 
+	Padding, border (finished already)
+	Z-index                     (opacity is implemented already)
+	At least 3 different positioning schemes
+	Transform (implemented already)
+	Transition
+
+Support responsive layout on mobile
+

@@ -1,5 +1,10 @@
 body{
 	background: #e6ffe6;
+	background-image: url("bookRecycleBG.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+	background-size: cover;
 }
 
 .navBar ul{
@@ -16,7 +21,7 @@ body{
 .navBar li a {
 	text-decoration:none;
 	padding:5px 0;
-	width:150px;
+	width:125px;
 	height: 25px;
 	background:#003399;
 	color:#eee;
@@ -27,6 +32,19 @@ body{
 	-moz-transition: all 1s ease-in-out;
 	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
+}
+
+.navBar li div {
+	text-decoration:none;
+	padding:5px 0;
+	padding-right: 15px;
+	width:400px;
+	height: 25px;
+	background:#003399;
+	color:#eee;
+	float:left;
+	text-align:right;
+	border-left:1px solid #fff;
 }
 
 .navBar li a:hover {
@@ -71,7 +89,7 @@ img.large {
 	height: 200px;
 }
 
-img:hover{
+img#ourLogo:hover{
 	transform: rotate(359deg);
 	-webkit-transition: all 2s ease;
 	-moz-transition: all 2s ease;
@@ -132,15 +150,23 @@ button {
 	height: 30px;
 }
 
-table, th, td {
+table, td {
     border: 2px solid black;
-
+	background: rgba(255,255,255,0.20);
+	color:dark-gray;
 }
+th {
+    border: 2px solid black;
+	background: rgba(0,0,51,0.70);
+	color: white;
+}
+
+table tbody tr:hover {background-color: #b3b3ff}/*#8ff78a}*/
 
 div#selected{
 	text-decoration:none;
 	padding:5px 0;
-	width:150px;
+	width:125px;
 	height: 25px;
 	background:#99bbff;
 	color:#00091a;
@@ -156,11 +182,32 @@ div#invalidSelection{
 	color:red;
 }
 
-img{
+img#ourLogo{
     position: absolute;
     left: 50px;
     top: 120px;
     z-index: -1;
+}
+div#profPic{
+	position: absolute;
+    left: 400px;
+    top: 120px;	
+}
+
+h1{
+	font-family: lucida sans;
+	font-weight: bold;
+	font-size: 28px;
+	color:#000066;
+	padding: 10px 15px;
+	margin: 0px 0px 0px 0px;
+	/*background: #f2f2f2;*/
+	background: #e6ffe6;
+	background-image: url("bookRecycleBG.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+	background-size: cover;
 }
 
 .bottomDescr{

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+	circle {
+	  fill: rgb(31, 119, 180);
+	  fill-opacity: .25;
+	  stroke: rgb(31, 119, 180);
+	  stroke-width: 1px;
+	}
+
+	.leaf circle {
+	  fill: #ff7f0e;
+	  fill-opacity: 1;
+	}
+
+	text {
+	  font: 10px sans-serif;
+	  text-anchor: middle;
+	}
+
+</style>
+<svg width="960" height="960"></svg>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>		
+<script src="https://fb.me/react-15.0.0.js"></script>
+<script src="https://fb.me/react-dom-15.0.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+<body>
+	<a href="index.html">Back to Home</a>
+</body>
+<script> 
+jQuery(window).load(function() {
+	
+	//create a SVG
+	var svg = d3.select("svg"),
+		diameter = +svg.attr("width"),
+		g = svg.append("g").attr("transform", "translate(2,2)"),
+		format = d3.format(",d");
+	//create a circle pack
+	var pack = d3.pack()
+		.size([diameter - 4, diameter - 4]);
+
+	//modify the json object to hierarchical json object. But there is a bug: it will finish after other code is excuted, due to the asychronis request.
+	var jsonSchool = {"name": "allSchool", "children": null};
+	var jsonChildSchool = {"name": null, "children": null};
+	var ref = new Firebase("https://bookrecycle-5b8d1.firebaseio.com/school");
+	ref.on("value", function(snapshot){
+		//console.log(snapshot.val());
+		var jsonSchools = [];
+		snapshot.forEach(function(childSchool){
+			jsonChildSchool = {"name": childSchool.key()};
+			var jsonSchoolCourses = [];
+			//console.log(childSchool.val())		
+			childSchool.forEach(function(childCourseId){
+
+				//console.log("this is not val " + childCourseId);
+				//console.log(childCourseId.val());
+				var courseInfo = {"name": childCourseId.key(), "size": Object.keys(childCourseId.val()).length};
+				jsonSchoolCourses.push(courseInfo)
+			});
+			jsonChildSchool["children"] = jsonSchoolCourses;
+			jsonSchools.push(jsonChildSchool);	
+		});
+		jsonSchool["children"] = jsonSchools;
+		
+		console.log("this is jsonSchool    " + jsonSchool);
+		console.log("This is the whole jsonSchool    " + JSON.stringify(jsonSchool));
+		//compute the hierarchy, please check API reference
+		var root = d3.hierarchy(jsonSchool)
+			.sum(function(d) { return d.size; })
+			.sort(function(a, b) { return b.value - a.value; });
+		  
+		console.log("this is root of hierarchy! " + root.value);
+		//feed the hierarchy data to circle pack. and then bind the circle pack data to "node"
+		var node = g.selectAll(".node")
+			.data(pack(root).descendants())
+			.enter().append("g")
+			.attr("class", function(d) { return d.children ? "node" : "leaf node"; })
+			.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+		  
+		//buggy due to asychronis firebase function
+		node.append("title")
+			.text(function(d) { return d.data.name + "\n" + format(d.value); });
+
+		node.append("circle")
+			.attr("r", function(d) { return d.r; });
+
+		node.filter(function(d) { return !d.children; }).append("text")
+			.attr("dy", "0.3em")
+			.text(function(d) { return d.data.name.substring(0, d.r / 3); });
+		  
+	});
+
+});
+
+</script>
